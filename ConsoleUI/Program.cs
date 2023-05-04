@@ -8,9 +8,9 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            //CarTest();
+            CarTest();
 
-            CarDetailTest();
+            //CarDetailTest();
             //UserTest();
             //CustomerTest();
 
@@ -54,7 +54,7 @@ namespace ConsoleUI
         private static void CarTest()
             {
                 CarManager carManager = new CarManager(new EfCarDal());
-                var result = carManager.GetCarsByBrandId(11);
+                var result = carManager.GetAll();
                 if (result.Success==true)
                 {
                     foreach (var car in result.Data)
