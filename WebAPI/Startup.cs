@@ -1,3 +1,7 @@
+using Business.Abstract;
+using Business.Concrete;
+using DataAccsess.Abstract;
+using DataAccsess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +32,9 @@ namespace WebAPI
         {
 
             services.AddControllers();
+            services.AddSingleton<ICarService, CarManager>();
+            services.AddSingleton<ICarDal, EfCarDal>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });

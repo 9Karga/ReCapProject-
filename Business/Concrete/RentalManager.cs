@@ -22,7 +22,7 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            if (rental.ReturnDate==null)
+            if (rental.ReturnDate == null)
             {
                 return new ErrorResult(Messages.RentDateInvalid);
             }

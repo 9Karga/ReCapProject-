@@ -11,7 +11,7 @@ namespace Business.Constants
         public static string CarAdded = "Araç eklendi";
         internal static string CarDeleted = "Araç silindi";
         internal static string CarUpdated = "Araç bilgileri güncellendi";
-        public static string CarNameInvalid = "Araç isimi geçersiz";
+        public static string CarNameInvalid = "Araç isimi iki karakterden uzun olmalı";
         internal static string MaintenanceTime = "Sistem bakımda";
         internal static string RentDateInvalid = "Araç henüz teslim edilmemiş";
         internal static string RentalAdded = "Araç Kiralandı";
@@ -29,6 +29,6 @@ namespace Business.Constants
         internal static string BrandAdded = "Marka eklendi";
         internal static string BrandDeleted = "Marka silindi";
         internal static string BrandUpdated = "Marka bilgisi güncellendi";
-        
+        internal static string CarDailyPriceInvalid = "Kiralama bedeli 0 dan büyük olmalı";
     }
 }
