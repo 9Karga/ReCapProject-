@@ -32,8 +32,6 @@ namespace WebAPI
         {
 
             services.AddControllers();
-            services.AddSingleton<ICarService, CarManager>();
-            services.AddSingleton<ICarDal, EfCarDal>();
 
             services.AddSwaggerGen(c =>
             {
