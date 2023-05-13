@@ -97,7 +97,18 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-    
-        
+        [HttpPost("delete")]
+        public IActionResult Delete(Car car)
+        {
+            var carDelete = _carService.GetById(car.CarId).Data;
+            var result = _carService.Delete(carDelete);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
     }
 }
