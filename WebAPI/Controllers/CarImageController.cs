@@ -80,7 +80,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpGet("getimagebycarid")]
+        [HttpGet("getimagesbycarid")]
         public IActionResult GetImagesByCarId(int carId)
         {
             var result = _carImageService.GetImagesByCarId(carId);

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
+using System;﻿
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Core.Utilities.Helpers.FileHelpers
 {
@@ -16,7 +16,7 @@ namespace Core.Utilities.Helpers.FileHelpers
             if (File.Exists(filePath))
             {
                 File.Delete(filePath);
-            } 
+            }
         }
 
         public string Update(IFormFile file, string filePath, string root)
@@ -30,7 +30,7 @@ namespace Core.Utilities.Helpers.FileHelpers
 
         public string Upload(IFormFile file, string root)
         {
-            if (file.Length>0)
+            if (file.Length > 0)
             {
                 if (!Directory.Exists(root))
                 {

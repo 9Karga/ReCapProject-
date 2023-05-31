@@ -25,6 +25,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();
             builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
 
+            builder.RegisterType<UserManager>().As<ICarImageService>().SingleInstance();
+            builder.RegisterType<EfUserDal>().As<ICarImageDal>().SingleInstance();
+
             builder.RegisterType<FileHelperManager>().As<IFileHelperService>().SingleInstance();
 
 

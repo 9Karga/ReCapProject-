@@ -28,7 +28,7 @@ namespace Business.Concrete
         public IResult Add(IFormFile file, CarImage carImage)
         {
             IResult result = BusinessRules.Run(CheckForCarImageLimit(carImage.CarId));
-            if (result != null)
+            if (result!=null)
             {
                 return result;
             }
@@ -53,13 +53,13 @@ namespace Business.Concrete
 
         public IDataResult<CarImage> GetById(int id)
         {
-            return new SuccessDataResult<CarImage>(_carImageDal.Get(c => c.CarId == id));
+            return new SuccessDataResult<CarImage>(_carImageDal.Get(c => c.Id == id));
         }
 
         public IDataResult<List<CarImage>> GetImagesByCarId(int id)
         {
             IResult result = BusinessRules.Run(CheckImageExists(id));
-            if (result != null)
+            if (result==null)
             {
                 return new ErrorDataResult<List<CarImage>>(GetDefaultImage(id).Data);
             }
@@ -96,6 +96,7 @@ namespace Business.Concrete
 
         private IDataResult<List<CarImage>> GetDefaultImage(int carId)
         {
+
             List<CarImage> carImages = new List<CarImage>();
 
             carImages.Add(new CarImage { CarId = carId, ImageDate = DateTime.Now, ImagePath = "DefaultImage.jpg" });

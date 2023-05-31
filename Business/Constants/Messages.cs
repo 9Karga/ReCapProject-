@@ -32,5 +32,6 @@ namespace Business.Constants
         public static string CarDailyPriceInvalid = "Kiralama bedeli 0 dan büyük olmalı";
         public static string CarImageLimitReached = "En fazla 5 fotoğraf eklenebilir";
         public static string CarImageDeleted ="Fotoğraf silindi";
+        
     }
 }
